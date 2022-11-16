@@ -8,10 +8,11 @@
 - [devkitPro](https://devkitpro.org/wiki/Getting_Started)
 
 ```
-pacman -S switch-dev
 git clone https://github.com/zig-homebrew/zig-switch
 cd zig-switch/
-zig build # then run zig-out/zig-switch.nro with ryujinx
+nix-build nix/devkitA64.nix
+nix-shell
+zig build
 ```
 
 ## Resources

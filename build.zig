@@ -2,8 +2,8 @@ const std = @import("std");
 const builtin = @import("builtin");
 
 const emulator = "Ryujinx";
-const flags = .{"-lnx"};
-const devkitpro = "/opt/devkitpro";
+const flags = .{ "-lnx", "-ldeko3d" };
+const devkitpro = "result";
 
 pub fn build(b: *std.build.Builder) void {
     const mode = b.standardReleaseOptions();
